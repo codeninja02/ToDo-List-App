@@ -20,7 +20,7 @@ You can create, delete tasks, make special pinned notes in this ToDoList. It use
 
 Technologies used in this app are Firebase Firestore for database to store users tasks and information, jQuery and basic web technologies - HTML, CSS and JavaScript.
 
-![ToDo List Preview](https://firebasestorage.googleapis.com/v0/b/scholar-engine-32b26.appspot.com/o/2%201.png?alt=media&token=d92afc30-8e2a-40ac-be03-bcfc2340b3716)
+![ToDo List Preview](https://firebasestorage.googleapis.com/v0/b/scholar-engine-32b26.appspot.com/o/2%201.png?alt=media&token=d92afc30-8e2a-40ac-be03-bcfc2340b371)
 
 - [VIEW DEMO](https://todolistapp-02.netlify.app)
 
