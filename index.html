@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+    <link id="lightStyle" rel="stylesheet" href="style.css">
+    <link id="darkStyle" rel="stylesheet" href="dark.css" media="max-width=1px">
+    <title>To Do List</title>
+</head>
+<body>
+    
+    <div id="superbody" class="superbody">
+
+    <div class="section-1-container">
+
+        <div id="topCircle1" class="s-1-circle-A proc-c-1"></div>
+
+        <div class="s-1-heading-1">
+            ToDo List App
+        </div>
+
+        <div class="section-1">
+            <div class="s-1-c">
+                <div class="s-1-c-A">
+                    <input id="codeInput1" class="s1ca-input" placeholder="PIN" type="text" maxlength="4" autocomplete="off" spellCheck="false">
+                </div>
+                <div class="s-1-c-B">
+                    <ion-icon class="ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5" id="cutCodeBtn" name="close-circle-outline"></ion-icon>
+                    <!-- <div class="loading-container-1"> -->
+                    <ion-icon id="loadingCode" name="refresh-circle-outline"></ion-icon>
+                    <!-- </div> -->
+                </div>
+            </div>
+            <div id="continueWithCodeBtn" class="s-2-c ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                <div class="s-2-c-B">
+                    <div class="s-2-c-B-c1"></div>
+                    <div class="s-2-c-B-c2"></div>
+                </div>
+                <div class="s-2-c-A">
+                    <div class="s2c-circle"></div>
+                    Continue <ion-icon class="s2cA-icon-1" name="arrow-forward-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="s-3-c">
+                You can use this pin to log in again as all of your tasks will be saved on this pin.
+            </div>
+            <div class="s-4-c">
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-2-container">
+
+        <div class="navbar">
+            <div class="back-btn-notes-BB" id="closeBBNBB">
+                <ion-icon class="BBNBB-B" name="chevron-back-outline"></ion-icon> Back
+            </div>
+            <div class="nav-1 ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                <ion-icon class="nav-icons" name="menu"></ion-icon>
+            </div>
+            <div class="nav-2 ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                <div class="nva-2-plus">
+                    <ion-icon class="nav-icons" name="add"></ion-icon>
+                </div>
+            </div>
+        </div>
+        <div class="section-2">
+
+            <div class="section-2-heading-1">
+                <div class="s2h1----A">
+                    Welcome, 
+                </div>
+                <div class="s2h1----B">
+                    <input id="nameInputTxt" type="text" value="Guest" placeholder="First Name" maxlength="20" autocomplete="off" spellCheck="false">
+                </div>
+                <div class="s2h1----C">
+                    <ion-icon name="pencil"></ion-icon>
+                </div>
+            </div>
+            <div class="s-2-date-1">
+                20 Nov 2020
+            </div>
+
+            <div class="notes-pre ripple"  ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+
+                <div class="note-box-1-B">
+                    <div class="note-icon-c-1">
+                        <div class="note-icon-1">
+                            <ion-icon name="create-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="note-box--B">
+                    <div class="note-heading-1--B">
+                        Special Note
+                    </div>
+                    <div class="note-subhead-1--B">
+                        Click here to write a important note which will be pinned to the top.
+                    </div>
+                </div>
+
+            </div>
+            <div class="notes-container">
+
+                    <div class="note-box-1">
+                        <div class="note-icon-c-1">
+                            <div class="note-icon-1">
+                                <ion-icon name="clipboard-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="note-circle-1"></div>
+                        <div class="note-circle-2"></div>
+                    </div>
+                    <div class="note-box-2">
+                        <div class="note-heading-1">
+                            Incoming Meeting
+                        </div>
+                        <div class="note-subhead-1">
+                            You have a meeting scheduled in 20 mins. Prepare for it now!
+                        </div>
+                        <div class="note-icon-con-1">
+                            <div class="nic1-1">
+                                <ion-icon name="create-outline"></ion-icon>
+                            </div>
+                            <div class="nic1-2">
+                                <ion-icon name="trash-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="notes-edit">
+
+                <div class="ne-heading-cont-1">
+                    <div class="nehc1-A">
+                        Note Heading:
+                    </div>
+                    <div class="nehc1-B">
+                        <input id="noteHeadingTxt" class="nehc1--input-A" placeholder="Enter Note Heading" type="text" maxlength="80" autocomplete="off" spellCheck="false">
+                    </div>
+                </div>
+                <div class="ne-note-cont-1">
+                    <div class="nehc1-B--2">
+                        Note:
+                    </div>
+                    <div class="nehc1-B--BB">
+                        <textarea id="fullNoteTxt" class="nehc1--input-A--B" maxlength="200" placeholder="Enter Note...." type="text" autocomplete="off" spellCheck="false"></textarea>
+                    </div>
+                </div>
+
+                <div id="submitNoteBtn2" class="ne-note-cont-1-BTN ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                    Save
+                </div>
+
+            </div>
+
+            <div class="add-task">
+
+                <div class="ne-heading-cont-1__B">
+                    <div class="nehc1-A__B">
+                        Task Heading:
+                    </div>
+                    <div class="nehc1-B__B">
+                        <input id="taskHeading2" class="nehc1--input-A__B" placeholder="Enter Task Heading" type="text" maxlength="80" autocomplete="off" spellCheck="false">
+                    </div>
+                </div>
+
+                <div class="ne-note-cont-1__B">
+                    <div class="nehc1-B--2__B">
+                        Task:
+                    </div>
+                    <div class="nehc1-B--BB__B">
+                        <textarea id="taskFullTxt2" class="nehc1--input-A--B__B" maxlength="200" placeholder="Enter Task...." type="text" autocomplete="off" spellCheck="false"></textarea>
+                    </div>
+                </div>
+
+                <div id="addTaskBtn2" class="ne-note-cont-1-BTN__B ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                    Save
+                </div>
+
+            </div>
+
+            <div class="task-heading-2">
+                <div class="th2-A">
+                    Tasks
+                </div>
+                <div class="th2">
+                    <div class="th2-B ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </div>
+                    <div class="th2-C ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                        Add Task
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="tasks-container">
+
+                <!-- <div class="task">
+                    <div class="task-icon">
+                        <ion-icon name="calendar-outline"></ion-icon>
+                    </div>
+                    <div class="task--box-2">
+                        <div class="task-heading-1">
+                            Task Heading
+                        </div>
+                        <div class="task-sub-1">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, doloribus?
+                        </div>
+                    </div>
+                    <div class="task--box-3">
+                        <div class="task-delete-1">
+                            <ion-icon name="close-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+            
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="bottom-toast">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nulla.
+    </div>
+    
+    <div class="side-menu">
+            <div class="side-menu-top-c-1">
+                <!-- <div class="side-m-icon-cont">
+                    <div class="side-m-icon-c">
+                        <ion-icon class="side-icon-1" name="calendar-outline"></ion-icon>
+                    </div>
+                    <div class="side-m-icon-c-2">
+                        <ion-icon class="side-icon-2" name="logo-github"></ion-icon>
+                    </div>
+                    <div class="side-m-icon-c-3">
+                        <ion-icon class="side-icon-3" name="logo-instagram"></ion-icon>
+                    </div>
+                </div> -->
+                <div class="side-m-c-c-2">
+                    <span class="side-m-c-c-3 ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                        <ion-icon class="smcc3----B" name="chevron-back-outline"></ion-icon> Back
+                    </span>
+                    <span id="codeDisplayHereTXT" class="side-m-c-c-4">
+                        CDFS
+                    </span>
+                </div>
+                <!-- <div class="side-m-c-c-4">
+                    CDFS
+                </div> -->
+            </div>
+            <div class="side-menu-top-c-2">
+                <div id="sm1" class="sm-1 ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                    Make Special Note
+                </div>
+                <div id="sm2" class="sm-1">
+                    Switch Mode
+                </div>
+                <a href="https://www.sololearn.com/Profile/17904120/?ref=app" target="_blank" id="sm3" class="sm-1 ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                    Follow Me
+                </a>
+                <a href="https://www.instagram.com/codeninja02/" target="_blank" id="sm4" class="sm-1 ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                    Visit My Instagram
+                </a>
+                <a href="https://github.com/codeninja02/ToDo-List-App" target="_blank" id="sm5" class="sm-1 ripple" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                    Get Code on GitHub
+                </a>
+                <div id="sm6" class="sm-1 ripple sm-last" ripple-press-expand-time="1" ripple-release-expand-time="0.5">
+                    Logout
+                </div>
+            </div>
+            <div class="bottom-copyright">
+                &copy; Programmer
+            </div>
+
+    </div>
+
+    <div class="splash-screen">
+        <div class="splash-container">
+            <span class="splash-icon">
+                <!-- Thanks to Raiden Kaneda for the SVG icon -->
+                <svg viewBox="-25 0 500 500">
+                <path d="M100,50h-50a50,50 0 00-50,50v350a50,50 0 00 50,50h350a50,50 0 00 50-50v-350a50,50 0 00-50-50h-50v25h50a25,25 0 01 25,25v350a25,25 0 01-25,25h-350a25,25 0 01-25-25v-350a25,25 0 01 25-25h50z" />
+                <path d="M150,50 L300,50 L300,75 L150,75 Z" />
+                <rect x="110" y="0" width="30" height="150" />
+                <rect x="310" y="0" width="30" height="150" />
+                <rect x="25" y="225" width="400" height="25" />
+                </svg>
+            </span>
+            <div class="splash-heading">
+                ToDoList App
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        var ripple=function(){function rippleStart(e){rippleContainer=getRippleContainer(e.target),("0"==rippleContainer.getAttribute("animating")||!rippleContainer.hasAttribute("animating"))&&e.target.className.indexOf("ripple")>-1&&(rippleContainer.setAttribute("animating","1"),offsetX="number"==typeof e.offsetX?e.offsetX:e.touches[0].clientX-e.target.getBoundingClientRect().left,offsetY="number"==typeof e.offsetY?e.offsetY:e.touches[0].clientY-e.target.getBoundingClientRect().top,fullCoverRadius=Math.max(Math.sqrt(Math.pow(offsetX,2)+Math.pow(offsetY,2)),Math.sqrt(Math.pow(e.target.clientWidth-offsetX,2)+Math.pow(e.target.clientHeight-offsetY,2)),Math.sqrt(Math.pow(offsetX,2)+Math.pow(e.target.clientHeight-offsetY,2)),Math.sqrt(Math.pow(offsetY,2)+Math.pow(e.target.clientWidth-offsetX,2))),expandTime=e.target.getAttribute("ripple-press-expand-time")||3,rippleContainer.style.transition="transform "+expandTime+"s ease-out, box-shadow 0.1s linear",rippleContainer.style.background=e.target.getAttribute("ripple-color")||"white",rippleContainer.style.opacity=e.target.getAttribute("ripple-opacity")||"0.6",rippleContainer.style.boxShadow=e.target.getAttribute("ripple-shadow")||"none",rippleContainer.style.top=offsetY+"px",rippleContainer.style.left=offsetX+"px",rippleContainer.style.transform="translate(-50%, -50%) scale("+fullCoverRadius/100+")")}function rippleEnd(e){rippleContainer=getRippleContainer(e.target),"1"==rippleContainer.getAttribute("animating")&&(rippleContainer.setAttribute("animating","2"),backgroundA=window.getComputedStyle(rippleContainer,null).getPropertyValue("background"),destinationRadius=e.target.clientWidth+e.target.clientHeight,rippleContainer.style.transition="none",expandTime=e.target.getAttribute("ripple-release-expand-time")||.4,rippleContainer.style.transition="transform "+expandTime+"s linear, backgroundA "+expandTime+"s linear, opacity "+expandTime+"s ease-in-out",rippleContainer.style.transform="translate(-50%, -50%) scale("+destinationRadius/100+")",rippleContainer.style.background="radial-gradient(transparent 10%, "+backgroundA+" 40%)",rippleContainer.style.opacity="0",e.target.dispatchEvent(new CustomEvent("ripple-button-click",{target:e.target})),eval(e.target.getAttribute("onrippleclick")))}function rippleRetrieve(e){rippleContainer=getRippleContainer(e.target),"translate(-50%, -50%) scale(0)"==rippleContainer.style.transform&&rippleContainer.setAttribute("animating","0"),"1"==rippleContainer.getAttribute("animating")&&(rippleContainer.setAttribute("animating","3"),collapseTime=e.target.getAttribute("ripple-leave-collapse-time")||.4,rippleContainer.style.transition="transform "+collapseTime+"s linear, box-shadow "+collapseTime+"s linear",rippleContainer.style.boxShadow="none",rippleContainer.style.transform="translate(-50%, -50%) scale(0)")}function getRippleContainer(e){for(childs=e.childNodes,ii=0;ii<childs.length;ii++)try{if(childs[ii].className.indexOf("rippleContainer")>-1)return childs[ii]}catch(t){}return e}window.addEventListener("load",function(){css=document.createElement("style"),css.type="text/css",css.innerHTML=".ripple { overflow: hidden !important; position: relative; } .ripple .rippleContainer { display: block; height: 200px !important; width: 200px !important; padding: 0px 0px 0px 0px; border-radius: 50%; position: absolute !important; top: 0px; left: 0px; transform: translate(-50%, -50%) scale(0); -webkit-transform: translate(-50%, -50%) scale(0); -ms-transform: translate(-50%, -50%) scale(0); background-color: transparent; }  .ripple * {pointer-events: none !important;}",document.head.appendChild(css),ripple.registerRipples()});var ripple={registerRipples:function(){for(rippleButtons=document.getElementsByClassName("ripple"),i=0;i<rippleButtons.length;i++)rippleButtons[i].addEventListener("touchstart",function(e){rippleStart(e)},{passive:!0}),rippleButtons[i].addEventListener("touchmove",function(e){if(e.target.hasAttribute("ripple-cancel-on-move"))return void rippleRetrieve(e);try{overEl=document.elementFromPoint(e.touches[0].clientX,e.touches[0].clientY).className.indexOf("ripple")>=0}catch(t){overEl=!1}overEl||rippleRetrieve(e)},{passive:!0}),rippleButtons[i].addEventListener("touchend",function(e){rippleEnd(e)},{passive:!0}),rippleButtons[i].addEventListener("mousedown",function(e){rippleStart(e)},{passive:!0}),rippleButtons[i].addEventListener("mouseup",function(e){rippleEnd(e)},{passive:!0}),rippleButtons[i].addEventListener("mousemove",function(e){!e.target.hasAttribute("ripple-cancel-on-move")||0==e.movementX&&0==e.movementY||rippleRetrieve(e)},{passive:!0}),rippleButtons[i].addEventListener("mouseleave",function(e){rippleRetrieve(e)},{passive:!0}),rippleButtons[i].addEventListener("transitionend",function(e){("2"==e.target.getAttribute("animating")||"3"==e.target.getAttribute("animating"))&&(e.target.style.transition="none",e.target.style.transform="translate(-50%, -50%) scale(0)",e.target.style.boxShadow="none",e.target.setAttribute("animating","0"))},{passive:!0}),getRippleContainer(rippleButtons[i])==rippleButtons[i]&&(rippleButtons[i].innerHTML+='<div class="rippleContainer"></div>')},ripple:function(t){t.className.indexOf("ripple")<0||(rect=t.getBoundingClientRect(),e={target:t,offsetX:rect.width/2,offsetY:rect.height/2},rippleStart(e),rippleEnd(e))}};return ripple}();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
