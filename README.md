@@ -11,9 +11,9 @@
 [![MIT License][license-shield]][license-url]
 -->
 
-<img src="https://res.cloudinary.com/dpj9ddsjf/image/upload/v1617839809/icon_oowyin.png" width="100px" align="right"/>
+<img src="https://res.cloudinary.com/dpj9ddsjf/image/upload/v1618078370/528e2946f76a74030660b231c7ff1dc1_ece1n1.png" width="100px" align="right"/>
 
-# 💬 ToDo List App 
+# 📝 ToDo List App 
 ### A Simple web todo list app with Firebase Cloud Firestore and vanilla javascript (only for mobile atm).
 
 ▶️ <a href="https://todolistapp-02.netlify.app/">Live Preview (only for mobile view)</a>
