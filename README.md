@@ -11,24 +11,26 @@
 [![MIT License][license-shield]][license-url]
 -->
 
-<img src="https://firebasestorage.googleapis.com/v0/b/scholar-engine-32b26.appspot.com/o/Frame%20422.png?alt=media&token=97a8dc64-20d8-411e-a076-511814f36547" align="right"/>
+<img src="https://res.cloudinary.com/dpj9ddsjf/image/upload/v1617839809/icon_oowyin.png" width="100px" align="right"/>
 
-# ToDo List App [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/codeninja02)
-> A simple ToDo List with Firebase Firestore
+# 💬 ToDo List App 
+### A Simple web todo list app with Firebase Cloud Firestore and vanilla javascript (only for mobile atm).
+
+▶️ <a href="https://todolistapp-02.netlify.app/">Live Preview (only for mobile view)</a>
 
 You can create, delete tasks, make special pinned notes in this ToDoList. It uses Firebase Firestore for backend and the basic web languages for frontend. All of the tasks are stored in a PIN which is create by the user.
 
 Technologies used in this app are Firebase Firestore for database to store users tasks and information, jQuery and basic web technologies - HTML, CSS and JavaScript.
 
-![ToDo List Preview](https://firebasestorage.googleapis.com/v0/b/scholar-engine-32b26.appspot.com/o/2%201.png?alt=media&token=ea4b0114-6023-4264-98d1-133724891f8c)
+![Messaging App Preview](https://res.cloudinary.com/dpj9ddsjf/image/upload/v1617839394/scr1_tqmivu.png)
+![Messaging App Preview](https://res.cloudinary.com/dpj9ddsjf/image/upload/v1617839394/scr2_qqhgsg.png)
+![Messaging App Preview](https://res.cloudinary.com/dpj9ddsjf/image/upload/v1617839394/scr3_z8hzdt.png)
 
-- [VIEW DEMO](https://todolistapp-02.netlify.app)
+## ⚙️ Setup
 
-## Setup
+Set up your firebase configurations in the `firebase.js` file.
 
-Just set your firebase configurations in the file `\script.js` on line `10`
-
-```sh
+```javascript
   var config = {
     apiKey: "<YOUR_API_KEY>",
     authDomain: '<AUTH_DOMAIN>',
@@ -38,8 +40,12 @@ Just set your firebase configurations in the file `\script.js` on line `10`
   }
 ```
 
-## Social Links
+## 💻 Author
 
-- [INSTAGRAM](https://www.instagram.com/codeninja02/)
+- [Utsav Prasad](https://codeninja02.netlify.app/)
 
+## 🔗 Social Links
 
+- [Instagram](https://www.instagram.com/codeninja02/)
+- [Twitter](https://twitter.com/codeninja02/)
+- [Website](https://codeninja02.netlify.app/)
