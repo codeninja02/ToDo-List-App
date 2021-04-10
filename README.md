@@ -22,8 +22,10 @@ You can create, delete tasks, make special pinned notes in this ToDoList. It use
 
 Technologies used in this app are Firebase Firestore for database to store users tasks and information, jQuery and basic web technologies - HTML, CSS and JavaScript.
 
-<img src="https://res.cloudinary.com/dpj9ddsjf/image/upload/v1618080315/todo1_abp12z.png" width="260px"/>
-<img src="https://res.cloudinary.com/dpj9ddsjf/image/upload/v1618080315/todo2_u06guy.png" width="260px"/>
+<div>
+  <img src="https://res.cloudinary.com/dpj9ddsjf/image/upload/v1618080315/todo1_abp12z.png" width="260px"/>
+  <img src="https://res.cloudinary.com/dpj9ddsjf/image/upload/v1618080315/todo2_u06guy.png" width="260px"/>
+</div>
 
 ## ⚙️ Setup
 
